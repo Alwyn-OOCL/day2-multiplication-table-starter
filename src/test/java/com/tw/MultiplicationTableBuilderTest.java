@@ -187,4 +187,18 @@ class MultiplicationTableBuilderTest {
         // Then
         assertNull(multiplicationTable);
     }
+
+    @Test
+    void should_return_multiplicationTableRow_when_generateMultiplicationTableRow_given_a_start_2_and_end_3() {
+        // Given
+        MultiplicationTableBuilder multiplicationTableBuilder = new MultiplicationTableBuilder();
+        int start = 2;
+        int end = 3;
+
+        // When
+        String multiplicationTableRow = multiplicationTableBuilder.generateMultiplicationTableRow(start, end);
+
+        // Then
+        assertEquals("2*2=4 2*3=6", multiplicationTableRow);
+    }
 }

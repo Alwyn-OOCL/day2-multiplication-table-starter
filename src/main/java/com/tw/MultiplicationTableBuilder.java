@@ -19,4 +19,8 @@ public class MultiplicationTableBuilder {
         }
         return null;
     }
+
+    public String generateMultiplicationTableRow(int start, int end) {
+        return "";
+    }
 }
