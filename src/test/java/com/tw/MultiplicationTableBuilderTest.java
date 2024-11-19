@@ -173,4 +173,18 @@ class MultiplicationTableBuilderTest {
         // Then
         assertNull(multiplicationTable);
     }
+
+    @Test
+    void should_return_null_when_generateExpression_given_a_start_2_and_end_1001() {
+        // Given
+        MultiplicationTableBuilder multiplicationTableBuilder = new MultiplicationTableBuilder();
+        int start = 2;
+        int end = 1001;
+
+        // When
+        String multiplicationTable = multiplicationTableBuilder.generateExpression(start, end);
+
+        // Then
+        assertNull(multiplicationTable);
+    }
 }
