@@ -12,4 +12,8 @@ public class MultiplicationTableBuilder {
     public boolean isValid(int start, int end) {
         return isInRange(start) && isInRange(end) && isStartNotBiggerThanEnd(start, end);
     }
+
+    public String generateExpression(int start, int end) {
+        return "";
+    }
 }
