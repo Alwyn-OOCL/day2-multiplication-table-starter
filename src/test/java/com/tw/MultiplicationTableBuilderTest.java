@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class MultiplicationTableBuilderTest {
@@ -157,5 +158,19 @@ class MultiplicationTableBuilderTest {
 
         // Then
         assertEquals("2*3=6", multiplicationTable);
+    }
+
+    @Test
+    void should_return_null_when_generateExpression_given_a_start_2_and_end_1() {
+        // Given
+        MultiplicationTableBuilder multiplicationTableBuilder = new MultiplicationTableBuilder();
+        int start = 2;
+        int end = 1;
+
+        // When
+        String multiplicationTable = multiplicationTableBuilder.generateExpression(start, end);
+
+        // Then
+        assertNull(multiplicationTable);
     }
 }

@@ -14,6 +14,9 @@ public class MultiplicationTableBuilder {
     }
 
     public String generateExpression(int start, int end) {
-        return "";
+        if (isValid(start, end)) {
+            return start + "*" + end + "=" + start * end;
+        }
+        return null;
     }
 }
